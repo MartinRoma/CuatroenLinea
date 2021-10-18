@@ -29,3 +29,21 @@ def test_gana_diagonal_decendente():
     ans=PartidaTerminada(tab,3,1,2)
 
     assert ans==True
+
+def test_no_gana_diagonal_decendente():
+    tab=[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,1,2,0,0],[0,0,0,1,2,0,0],[0,0,0,2,2,1,0],[0,0,0,1,2,2,1]]
+    ans=PartidaTerminada(tab,3,1,2)
+
+    assert ans==False
+
+def test_gana_diagonal_ascendente():
+    tab=[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,2,0,0,0],[1,0,2,1,0,0,0],[1,2,1,2,0,0,0],[2,1,2,1,0,0,0]]
+    ans=PartidaTerminada(tab,3,2,2)
+
+    assert ans==True
+
+def test_no_gana_diagonal_ascendente():
+    tab=[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,2,0,0,0,0],[1,0,2,1,0,0,0],[1,2,1,2,0,0,0],[2,1,2,1,0,0,0]]
+    ans=PartidaTerminada(tab,2,2,2)
+
+    assert ans==False
