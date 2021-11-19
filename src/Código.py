@@ -118,8 +118,8 @@ def Juego(tab,jugadas):
         return None
     else:
         for i, n  in enumerate(jugadas):
-            if type(n)!=int or n>7 or n<1:
-                print("Error todas las jugadas deben ser numeros enteros del 1 al 7")
+            if type(n)!=int or n>d[0] or n<1:
+                print("Error todas las jugadas deben ser numeros enteros del 1 al ",d[0])
                 break
             else:
                 if i%2==0:
