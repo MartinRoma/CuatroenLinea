@@ -1,6 +1,6 @@
 from src.Código import Juego
 
-def juego_valido_no_ganador():
+def test_juego_valido_no_ganador():
     tab=[[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0],[0,0,0,0,0,0,0]]
     jugadas=[1,2,3,2,3]
     Juego(tab,jugadas)
