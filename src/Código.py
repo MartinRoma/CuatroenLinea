@@ -17,6 +17,15 @@ tab = GenerarTableroVacio(d)
 
 #Función que dibuja el tablero
 def DibujarTablero(tab):
+    for y in range(len(tab)):
+        tab[y].append('|')
+        tab[y].insert(0,'|')
+    borde=[]
+    for y in range(d[0]):
+        borde.append('-')
+    borde.append('+')
+    borde.insert(0,'+')
+    tab.append(borde)
     for fila in tab:
         for celda in fila:
             if celda == 0:
